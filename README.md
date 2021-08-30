@@ -1,9 +1,9 @@
 # laravel-passport-spa-js
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/Moutah/laravel-passport-spa-js)
-![Build](https://github.com/Moutah/laravel-passport-spa-js/workflows/CI/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Moutah_laravel-passport-spa-js&metric=alert_status)](https://sonarcloud.io/dashboard?id=Moutah_laravel-passport-spa-js)
-![Sonar Coverage](https://img.shields.io/sonar/coverage/Moutah_laravel-passport-spa-js?server=https%3A%2F%2Fsonarcloud.io)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/maglr/laravel-passport-spa-js)
+![Build](https://github.com/maglr/laravel-passport-spa-js/workflows/CI/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maglr_laravel-passport-spa-js&metric=alert_status)](https://sonarcloud.io/dashboard?id=Moutah_laravel-passport-spa-js)
+![Sonar Coverage](https://img.shields.io/sonar/coverage/maglr_laravel-passport-spa-js?server=https%3A%2F%2Fsonarcloud.io)
 [![install size](https://packagephobia.now.sh/badge?p=laravel-passport-spa-js)](https://packagephobia.now.sh/result?p=laravel-passport-spa-js)
 [![License](https://img.shields.io/:license-mit-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
 
@@ -23,10 +23,6 @@ The package retrieves tokens by making an authorization request to the server th
 
 This will work as long as the user has an active session at the authentication server. When this session expires, the user is redirected to the authentication server's sign in page.
 
-The chart below illustrates the detailed flow of the package:
-
-<img src="https://www.moutah.ch/Laravel Passport SPA JS - Flow.jpg">
-
 > This package has been inspired by [@auth0/auth0-spa-js](https://github.com/auth0/auth0-spa-js).
 
 <a name="installation"></a>
@@ -36,7 +32,7 @@ The chart below illustrates the detailed flow of the package:
 Using [npm](https://npmjs.org/):
 
 ```sh
-npm install laravel-passport-spa-js
+npm install @maglr/laravel-passport-spa-js
 ```
 
 <a name="getting-started"></a>
@@ -53,14 +49,14 @@ The first step is to create a `LaravelPassportClient` instance as everything is 
 import createLaravelPassportClient from 'laravel-passport-spa-js';
 
 const lpClient = createLaravelPassportClient({
-  // the domain of your authentication server
+  // the domain of your authentication server (protocol is optional and defaults to https://)
   domain: 'auth.server.com',
 
   // the id of your Passport client
-  client_id: 22,
+  client_id: 1,
 
   // the uri the authentication server will send the authorization codes to
-  redirect_uri: 'http://your.app.com/signed-in',
+  redirect_uri: 'http://localhost:8080/auth/callback',
 });
 ```
 
@@ -140,7 +136,8 @@ When creating the `LaravelPassportClient` instance, you can pass several options
 const laravelClientOptions = {
   /**
    * REQUIRED
-   * Your Laravel Passport authentification domain url such as `'auth.server.com'`.
+   * Your Laravel Passport authentification url such as 
+   * `'auth.server.com' or 'http://auth.server.localhost'`.
    */
   domain: string;
 
@@ -263,10 +260,10 @@ Remove the cached token.
 
 ## Support and Feedback
 
-For support or to provide feedback, please [raise an issue](https://github.com/Moutah/laravel-passport-spa-js/issues) on the GitHub page.
+For support or to provide feedback, please [raise an issue](https://github.com/maglr/laravel-passport-spa-js/issues) on the GitHub page.
 
 <a name="license"></a>
 
 ## License
 
-This project is licensed under the MIT license. See the [LICENSE](https://github.com/Moutah/laravel-passport-spa-js/blob/master/LICENSE) file for more info.
+This project is licensed under the MIT license. See the [LICENSE](https://github.com/maglr/laravel-passport-spa-js/blob/master/LICENSE) file for more info.
