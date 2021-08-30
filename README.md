@@ -2,7 +2,7 @@
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/maglr/laravel-passport-spa-js)
 ![Build](https://github.com/maglr/laravel-passport-spa-js/workflows/CI/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maglr_laravel-passport-spa-js&metric=alert_status)](https://sonarcloud.io/dashboard?id=Moutah_laravel-passport-spa-js)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maglr_laravel-passport-spa-js&metric=alert_status)](https://sonarcloud.io/dashboard?id=maglr_laravel-passport-spa-js)
 ![Sonar Coverage](https://img.shields.io/sonar/coverage/maglr_laravel-passport-spa-js?server=https%3A%2F%2Fsonarcloud.io)
 [![install size](https://packagephobia.now.sh/badge?p=laravel-passport-spa-js)](https://packagephobia.now.sh/result?p=laravel-passport-spa-js)
 [![License](https://img.shields.io/:license-mit-blue.svg?style=flat)](https://opensource.org/licenses/MIT)

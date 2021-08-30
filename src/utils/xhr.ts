@@ -37,9 +37,20 @@ export const getJSON = async (url: string, options: any): Promise<any> => {
  * @param url
  */
 export const cleanUrl = (url: string): string => {
-  let cleanedUrl = url.replace(/\/$/, '').replace(/\/{2,}/g, '/');
-  if (!cleanedUrl.startsWith('http')) {
-    cleanedUrl = `https://${cleanedUrl}`;
+  let cleanUrl = url.replace(/([^:]\/)\/+/g, '$1');
+
+  // Backwards compatiblility/legacy
+  if (!cleanUrl.startsWith('http')) {
+    cleanUrl = `https://${cleanUrl}`;
   }
-  return `${cleanedUrl}`;
+
+  const urlObj = new URL(cleanUrl);
+  let urlString = urlObj.toString();
+
+  // Remove tailing slash since toString() returns that when no path is given.
+  if (urlString.endsWith('/')) {
+    urlString = urlString.substr(0, urlString.length - 1);
+  }
+
+  return urlString;
 };
