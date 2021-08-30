@@ -1,5 +1,5 @@
 {
-  "name": "laravel-passport-spa-js",
+  "name": "@maglr/laravel-passport-spa-js",
   "version": "0.1.3",
   "description": "Toolkit to use Laravel's Passport Authorization flow (PKCE) from a Javascript web app context.",
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Moutah/laravel-passport-spa-js.git"
+    "url": "git+https://github.com/maglr/laravel-passport-spa-js"
   },
   "keywords": [
     "laravel",
@@ -32,9 +32,9 @@
   "author": "moutah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Moutah/laravel-passport-spa-js/issues"
+    "url": "https://github.com/maglr/laravel-passport-spa-js/issues"
   },
-  "homepage": "https://github.com/Moutah/laravel-passport-spa-js#readme",
+  "homepage": "https://github.com/maglr/laravel-passport-spa-js#readme",
   "dependencies": {
     "unfetch": "^4.1.0"
   },

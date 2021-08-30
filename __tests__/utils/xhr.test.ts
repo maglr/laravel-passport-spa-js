@@ -87,11 +87,13 @@ describe('utils.xhr', () => {
       expect(cleanedUrl).toBe('https://www.test.com');
     });
 
-    it('builds url with https', async () => {
+    it('builds url with https unless protocol is specified', async () => {
       const cleanedUrlA = cleanUrl('http://www.test.com');
       const cleanedUrlB = cleanUrl('www.test.com');
-      expect(cleanedUrlA).toBe('https://www.test.com');
+      const cleanedUrlC = cleanUrl('https://www.test.com');
+      expect(cleanedUrlA).toBe('http://www.test.com');
       expect(cleanedUrlB).toBe('https://www.test.com');
+      expect(cleanedUrlC).toBe('https://www.test.com');
     });
   });
 });

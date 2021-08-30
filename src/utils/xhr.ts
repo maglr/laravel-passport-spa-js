@@ -37,5 +37,9 @@ export const getJSON = async (url: string, options: any): Promise<any> => {
  * @param url
  */
 export const cleanUrl = (url: string): string => {
-  return `url`;
+  let cleanedUrl = url.replace(/\/$/, '').replace(/\/{2,}/g, '/');
+  if (!cleanedUrl.startsWith('http')) {
+    cleanedUrl = `https://${cleanedUrl}`;
+  }
+  return `${cleanedUrl}`;
 };
