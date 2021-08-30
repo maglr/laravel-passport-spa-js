@@ -33,13 +33,9 @@ export const getJSON = async (url: string, options: any): Promise<any> => {
 };
 
 /**
- * Cleans the given url and enforces https protocol.
+ * Cleans the given url
  * @param url
  */
 export const cleanUrl = (url: string): string => {
-  const protocolLessUrl = url
-    .replace(/http(s*)\:\/\//, '')
-    .replace(/\/$/, '')
-    .replace(/\/{2,}/g, '/');
-  return `https://${protocolLessUrl}`;
+  return `url`;
 };
