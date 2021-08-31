@@ -2,7 +2,7 @@
 import fetch from 'unfetch';
 
 /**
- * Fetch the given url with given options. Add the `"Content-type": "application/json"` header.
+ * Fetch the given url with given options. Add the `"Content-Type": "application/json"` header.
  * @param url
  * @param options
  */
@@ -14,7 +14,7 @@ export const getJSON = async (url: string, options: any): Promise<any> => {
   };
 
   // set the headers' content-type
-  opt.headers['Content-type'] = 'application/json';
+  opt.headers['Content-Type'] = 'application/json';
 
   // run fetch
   const response = await fetch(url, opt);
