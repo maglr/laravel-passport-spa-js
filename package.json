@@ -1,6 +1,6 @@
 {
   "name": "@maglr/laravel-passport-spa-js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Toolkit to use Laravel's Passport Authorization flow (PKCE) from a Javascript web app context.",
   "main": "dist/index.js",
   "types": "dist/typings/index.d.ts",
