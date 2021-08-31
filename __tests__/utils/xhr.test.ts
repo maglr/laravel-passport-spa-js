@@ -31,7 +31,7 @@ describe('utils.xhr', () => {
 
       expect(mockUnfetch).toHaveBeenCalledWith('https://test.com', {
         ...options,
-        headers: { 'Content-type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
       });
     });
 
