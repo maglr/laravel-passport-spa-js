@@ -207,15 +207,15 @@ export class LaravelPassportClient implements LaravelPassportClientOptions {
     this._token = undefined;
   }
 
-  // *** Internal
-
   /**
    * Cache the token for this client.
    * @param token
    */
-  private storeToken(token: JWT): void {
+  storeToken(token: JWT): void {
     this._token = token;
   }
+
+  // *** Internal
 
   /**
    * Build the authorization request URL for this client and given AuthorizeParameters.
