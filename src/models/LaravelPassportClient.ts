@@ -208,14 +208,22 @@ export class LaravelPassportClient implements LaravelPassportClientOptions {
   }
 
   /**
-   * Cache the token for this client.
+   * Set the raw token for this client.
    * @param token
    */
-  storeToken(token: JWT): void {
-    this._token = token;
+  setToken(token: string): void {
+    this._token = new JWT(token);
   }
 
   // *** Internal
+
+  /**
+   * Cache the token for this client.
+   * @param token
+   */
+  private storeToken(token: JWT): void {
+    this._token = token;
+  }
 
   /**
    * Build the authorization request URL for this client and given AuthorizeParameters.
