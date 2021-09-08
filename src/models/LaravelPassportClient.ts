@@ -89,7 +89,7 @@ export class LaravelPassportClient implements LaravelPassportClientOptions {
       await this.signIn(currentScope);
     }
 
-    return this._token ? this._token.raw : null;
+    return this.getRawToken();
   }
 
   /**
