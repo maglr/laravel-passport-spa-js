@@ -94,6 +94,17 @@ export class LaravelPassportClient implements LaravelPassportClientOptions {
 
   /**
    * ```js
+   * lpClient.getRawToken();
+   * ```
+   *
+   * Get the token not async this client has in cache.
+   */
+  getRawToken(): string | null {
+    return this._token ? this._token.raw : null;
+  }
+
+  /**
+   * ```js
    * lpClient.getTokenScopes();
    * ```
    *
